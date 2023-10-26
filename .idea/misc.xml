@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week01/week01" />
+    <file type="web" url="file://$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week01_homework" />
+    <file type="web" url="file://$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week02" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

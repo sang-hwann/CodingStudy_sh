@@ -2,6 +2,8 @@ package com.sparta.week02;
 
 import com.sparta.week02.domain.Course;
 import com.sparta.week02.domain.CourseRepository;
+import com.sparta.week02.domain.CourseRequestDto;
+import com.sparta.week02.service.CourseService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,26 +19,31 @@ public class Week02Application {
     public static void main(String[] args) {
         SpringApplication.run(Week02Application.class, args);
     }
-
-    // Week02Application.java 의 main 함수 아래에 붙여주세요.
     @Bean
-    public CommandLineRunner demo(CourseRepository repository) {
+    public CommandLineRunner demo(CourseRepository courseRepository, CourseService courseService) {
         return (args) -> {
-            //데이터 저장
-            repository.save(new Course("프론트 엔드의 꽃", "홍길동"));
-            //모든 정보 조회후 리스트로 저장
-            List<Course> courseList = repository.findAll();
-            for (Course course : courseList) {
+            courseRepository.save(new Course("프론트엔드의 꽃, 리액트", "임민영"));
+
+            System.out.println("데이터 인쇄");
+            List<Course> courseList = courseRepository.findAll();
+            for (int i=0; i<courseList.size(); i++) {
+                Course course = courseList.get(i);
                 System.out.println(course.getId());
                 System.out.println(course.getTitle());
                 System.out.println(course.getTutor());
             }
-            //데이터를 한개 조회 ,그리고 예외처리
-            //Course course = repository.findById(1L).orElseThrow(() -> new IllegalArgumentException("해당 아이디가 존재하지 않습니다."));
 
-            //1L이라는 아이디값을 지정해서 조회하지만 orElseThrow는 혹시모를 예외로 하는것이다.
-            Course course1 = repository.findById(1L).orElseThrow(() -> new NullPointerException("아이디가 존재하지 않습니다."));
-            // NullPointerException는 가리키는 것이 없을 경우의 예외처리
+            CourseRequestDto requestDto = new CourseRequestDto("웹개발의 봄, Spring", "임민영");
+            courseService.update(1L, requestDto);
+            courseList = courseRepository.findAll();
+            for (int i=0; i<courseList.size(); i++) {
+                Course course = courseList.get(i);
+                System.out.println(course.getId());
+                System.out.println(course.getTitle());
+                System.out.println(course.getTutor());
+            }
+
+            courseRepository.deleteAll();
         };
     }
 }
