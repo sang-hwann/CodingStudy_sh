@@ -12,19 +12,8 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 public class PersonController {
-    private final PersonRepository personRepository;
-    private final PersonService personService;
-
-    @GetMapping("/myinfo")
-    public Person getPersonInfo() {
-        Person person = new Person();
-        person.setName("손흥민");
-        person.setAddress("런던");
-        person.setAge(28);
-        person.setJob("대한민국 축구선수");
-
-        return person;
-    }
+    public final PersonRepository personRepository;
+    public final PersonService personService;
 
     @PostMapping("/api/persons")
     public Person createPerson(@RequestBody PersonRequestDto requestDto) {
@@ -33,17 +22,17 @@ public class PersonController {
     }
 
     @GetMapping("/api/persons")
-    public List<Person> getPersons() {
+    public List<Person> getPerson() {
         return personRepository.findAll();
     }
 
     @PutMapping("/api/persons/{id}")
-    public Long updatePersons(@PathVariable Long id, @RequestBody PersonRequestDto requestDto) {
+    public Long updatePerson(@PathVariable Long id, @RequestBody PersonRequestDto requestDto) {
         return personService.update(id, requestDto);
     }
 
     @DeleteMapping("/api/persons/{id}")
-    public Long deletePersons(@PathVariable Long id) {
+    public Long deletePerson(@PathVariable Long id) {
         personRepository.deleteById(id);
         return id;
     }
