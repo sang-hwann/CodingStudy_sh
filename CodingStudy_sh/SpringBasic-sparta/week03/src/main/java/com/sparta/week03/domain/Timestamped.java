@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 @MappedSuperclass // entity가 자동으로 컬럼을 인식
 @EntityListeners(AuditingEntityListener.class)
-public class Timestamped {
+public abstract class Timestamped {
     @CreatedDate
     private LocalDateTime createdAt;
 
