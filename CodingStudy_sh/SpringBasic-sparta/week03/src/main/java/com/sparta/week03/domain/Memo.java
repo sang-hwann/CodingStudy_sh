@@ -8,7 +8,7 @@ import javax.persistence.*;
 @NoArgsConstructor // 기본생성자를 만듬
 @Getter
 @Entity
-public class Memo extends Timestamped{
+public class Memo extends Timestamped {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private Long id;
@@ -19,12 +19,17 @@ public class Memo extends Timestamped{
     @Column(nullable = false)
     private String contents;
 
-    public Memo(String username, String contents){
+    public Memo(String username, String contents) {
         this.username = username;
         this.contents = contents;
     }
 
-    public Memo(MemoRequestDto requestDto){
+    public Memo(MemoRequestDto requestDto) {
+        this.username = requestDto.getUsername();
+        this.contents = requestDto.getContents();
+    }
+
+    public void update(MemoRequestDto requestDto) {
         this.username = requestDto.getUsername();
         this.contents = requestDto.getContents();
     }
