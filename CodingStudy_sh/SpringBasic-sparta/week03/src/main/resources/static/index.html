@@ -269,22 +269,85 @@
         // 메모를 불러와서 보여줍니다.
         function getMessages() {
             // 1. 기존 메모 내용을 지웁니다.
+            $('#cards-box').empty(); //cards-box id의 내용물을 전부 비운다
             // 2. 메모 목록을 불러와서 HTML로 붙입니다.
+            $.ajax({
+                type: 'GET',
+                url: '/api/memos',
+                success:function (response){
+                    //우리가 API가 잘 작동해서 값을 받아오는데 resopnse 그걸 받아오는 객체가되는거임
+                    for(let i=0;i<response.length;i++){
+                        let memo = response[i];
+                        let id = memo.id;
+                        let username = memo.username;
+                        let contents = memo.contents;
+                        let modifiedAt = memo.modifiedAt;
+                        addHTML(id,username,contents,modifiedAt);
+                    }
+                }
+            });
         }
 
         // 메모 하나를 HTML로 만들어서 body 태그 내 원하는 곳에 붙입니다.
         function addHTML(id, username, contents, modifiedAt) {
             // 1. HTML 태그를 만듭니다.
+            let tempHtml = `<div id="cards-box" class="area-read">
+        <div class="card">
+            <!-- date/username 영역 -->
+            <div class="metadata">
+                <div class="date">
+                    ${modifiedAt}
+                </div>
+                <div id="1-username" class="username">
+                    ${username}
+                </div>
+            </div>
+            <!-- contents 조회/수정 영역-->
+            <div class="contents">
+                <div id="${id}-contents" class="text">
+                    ${contents}
+                </div>
+                <div id="${id}-editarea" class="edit">
+                    <textarea id="${id}-textarea" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
+                </div>
+            </div>
+            <!-- 버튼 영역-->
+            <div class="footer">
+                <img id="${id}-edit" onclick="editPost('${id}')" class="icon-start-edit" src="images/edit.png" alt="">
+                <img id="${id}-delete" onclick="deleteOne('${id}')" class="icon-delete" src="images/delete.png" alt="">
+                <img id="${id}-submit" onclick="submitEdit('${id}')" class="icon-end-edit" src="images/done.png" alt="">
+            </div>
+        </div>
+    </div>`
             // 2. #cards-box 에 HTML을 붙인다.
+            $('#cards-box').append(tempHtml);
         }
 
         // 메모를 생성합니다.
         function writePost() {
             // 1. 작성한 메모를 불러옵니다.
+            let contents = $('#contents').val(); // 입력한 값을 가져온다.
             // 2. 작성한 메모가 올바른지 isValidContents 함수를 통해 확인합니다.
+            if (isValidContents(contents)==false){
+                return; // isValidContents 함수를 이용해서 빈칸인지, 글자초과인지 확인후에 문제없으면 진행
+                //isValidContents는 여기 index안에 있는 함수를 이용한거임
+            }
             // 3. genRandomName 함수를 통해 익명의 username을 만듭니다.
+            let username = genRandomName(10); //랜덤한 닉네임을 만들기위해서 랜덤닉네임 함수 사용
             // 4. 전달할 data JSON으로 만듭니다.
+            let data = {'username':username , 'contents':contents}; //각 키값에 맞춰서 위의 변수값들을 넣어준다.
             // 5. POST /api/memos 에 data를 전달합니다.
+            $.ajax({ //jQuary를 이용한다는 의미
+                type:"POST", //메소드 post로 보낸다.
+                url:"/api/memos", //localhost::8080 은 jQuary가 알아서 작성해줘서 생략
+                contentType:"application/json", //json형식으로 전달하려고 지정 , 받을때 json이라는 걸 알아둬라는의미
+                data : JSON.stringify(data), //ARC에서는 Body라고 사용한 것이라고 할수 있다. SON.stringify(data)는 JSON 문자형식으로 변환하는 기능
+                // JSON.stringify(data)는 보낼때 json으로 변환해서 보내는것
+                success:function (response){ //성공적일때 response에 메세지를 담는것
+                    alert('메세지가 성공적으로 작성되었습니다.');
+                    window.location.reload(); //새로고침
+                }
+            });
         }
 
         // 메모를 수정합니다.
