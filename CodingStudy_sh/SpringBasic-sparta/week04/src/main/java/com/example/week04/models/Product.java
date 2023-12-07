@@ -28,20 +28,4 @@ public class Product extends Timestamped {
 
     @Column(nullable = false)
     private int myprice;
-
-    public Product(ProductRequestDto requestDto) {
-        this.title = requestDto.getTitle();
-        this.link = requestDto.getLink();
-        this.lprice = requestDto.getLprice();
-        this.image = requestDto.getImage();
-        this.myprice = 0; //설정을 안했다면 기본적으로 0으로 만듬
-    }
-
-    public void update(ProductMypriceRequestDto requestDto) {
-        this.myprice = requestDto.getMyprice();
-    }
-
-    public void updateByItemDto(ItemDto itemDto) {
-        this.lprice = itemDto.getLprice();
-    }
 }
