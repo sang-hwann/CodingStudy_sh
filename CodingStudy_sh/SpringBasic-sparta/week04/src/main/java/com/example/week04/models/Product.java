@@ -34,5 +34,10 @@ public class Product extends Timestamped {
         this.link = requestDto.getLink();
         this.lprice = requestDto.getLprice();
         this.image = requestDto.getImage();
+        this.myprice = 0; //설정을 안했다면 기본적으로 0으로 만듬
+    }
+
+    public void update(ProductMypriceRequestDto requestDto){
+        this.myprice = requestDto.getMyprice();
     }
 }

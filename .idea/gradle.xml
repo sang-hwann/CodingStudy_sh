@@ -24,6 +24,8 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week04" />
         <option name="gradleJvm" value="zulu-17" />
         <option name="modules">
