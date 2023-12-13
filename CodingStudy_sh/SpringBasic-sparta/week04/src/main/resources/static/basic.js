@@ -47,10 +47,32 @@ function execSearch() {
      * 검색결과 목록: #search-result-box
      * 검색결과 HTML 만드는 함수: addHTML
      */
+    $('#search-result-box').empty(); //검색시 해당 영역을 비워준다.
     // 1. 검색창의 입력값을 가져온다.
+    let query = $('#query').val(); // 해당 id 입력창의 값을 가져온다.
     // 2. 검색창 입력값을 검사하고, 입력하지 않았을 경우 focus.
+    if (query == '') {
+        alert("검색어를 입력해주세요");
+        $('#query').focus(); //포커스를 잡게만든다. 다시 입력창이 반짝이게한다.
+    }
     // 3. GET /api/search?query=${query} 요청
+    $.ajax({
+        type: 'GET',
+        url: `/api/search?query=${query}`,
+        success: function (response) {
+            //요청 성공시에
+            for (let i = 0; i < response.length; i++) { //각 성공시받은 데이터들로
+                let itemDto = response[i]; //각각 받아서
+                let tempHtml = addHTML(itemDto); // html 추가할 내용을 구성
+                $('#search-result-box').append(tempHtml); //html 추가할 영역에 추가한다.
+            }
+        }
+
+    })
+    //contenttype, data 는 get에서는 사용안함 , put, post에서만 사용한다. 참고하기
+
     // 4. for 문마다 itemDto를 꺼내서 HTML 만들고 검색결과 목록에 붙이기!
+
 
 }
 
@@ -60,7 +82,22 @@ function addHTML(itemDto) {
      * image, title, lprice, addProduct 활용하기
      * 참고) onclick='addProduct(${JSON.stringify(itemDto)})'
      */
-    return ``
+    return ` <div class="search-itemDto">
+            <div class="search-itemDto-left">
+                <img src="${itemDto.image}" alt="">
+            </div>
+            <div class="search-itemDto-center">
+                <div>${itemDto.title}</div>
+                <div class="price">
+                    ${itemDto.lprice}
+                    <span class="unit">원</span>
+                </div>
+            </div>
+            <div class="search-itemDto-right">
+                <img src="images/icon-save.png" alt="" onclick='addProduct(${JSON.stringify(itemDto)})'>
+            </div>
+        </div>`
+    //${JSON.stringify(itemDto)}는 json은 addProduct에서 사용을 못하니 , 문자로 바꿔주는것임
 }
 
 function addProduct(itemDto) {

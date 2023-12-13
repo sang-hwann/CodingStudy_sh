@@ -21,7 +21,7 @@ public class NaverShopSearch {
         String body = "";
 
         HttpEntity<String> requestEntity = new HttpEntity<String>(body, headers);
-        ResponseEntity<String> responseEntity = rest.exchange("https://openapi.naver.com/v1/search/shop.json?query=" + query, HttpMethod.GET, requestEntity, String.class);
+        ResponseEntity<String> responseEntity = rest.exchange("https://openapi.naver.com/v1/search/shop.json?query="+query, HttpMethod.GET, requestEntity, String.class);
         HttpStatus httpStatus = (HttpStatus) responseEntity.getStatusCode(); //(HttpStatus)로 강제변환함 , 원래는 없음
         int status = httpStatus.value();
         String response = responseEntity.getBody();
