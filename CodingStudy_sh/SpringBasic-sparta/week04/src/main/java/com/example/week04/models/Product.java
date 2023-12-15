@@ -37,7 +37,11 @@ public class Product extends Timestamped {
         this.myprice = 0; //설정을 안했다면 기본적으로 0으로 만듬
     }
 
-    public void update(ProductMypriceRequestDto requestDto){
+    public void update(ProductMypriceRequestDto requestDto) {
         this.myprice = requestDto.getMyprice();
+    }
+
+    public void updateByItemDto(ItemDto itemDto) {
+        this.lprice = itemDto.getLprice();
     }
 }

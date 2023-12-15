@@ -51,7 +51,7 @@ function execSearch() {
     // 1. 검색창의 입력값을 가져온다.
     let query = $('#query').val(); // 해당 id 입력창의 값을 가져온다.
     // 2. 검색창 입력값을 검사하고, 입력하지 않았을 경우 focus.
-    if (query == '') {
+    if ( query == '') {
         alert("검색어를 입력해주세요");
         $('#query').focus(); //포커스를 잡게만든다. 다시 입력창이 반짝이게한다.
     }
@@ -107,8 +107,25 @@ function addProduct(itemDto) {
      * 1. contentType: "application/json",
      * 2. data: JSON.stringify(itemDto),
      */
+
+    // console.log(itemDto); //다시 되돌려줄때도 JSON.stringify를 해줘야됨 , 그로인해서 해보는 테스트임
+    // console.log(JSON.stringify(itemDto));
+
     // 1. POST /api/products 에 관심 상품 생성 요청
+    $.ajax({
+        type: "POST",
+        url: "/api/products",
+        data: JSON.stringify(itemDto),
+        contentType: "application/json",
+        success: function (response) {
+            // console.log(response);
+            $('#container').addClass('active'); //아이디가 container를 찾아서 클래스에 active인것을 추가한다는 의미
+            targetId = response.id; //tagetID는 이 함수 맨위에 기본으로 만들어둔것이있음
+        }
+
+    })
     // 2. 응답 함수에서 modal을 뜨게 하고, targetId 를 reponse.id 로 설정 (숙제로 myprice 설정하기 위함)
+
 }
 
 function showProduct() {
@@ -118,13 +135,42 @@ function showProduct() {
      * 관심상품 HTML 만드는 함수: addProductItem
      */
     // 1. GET /api/products 요청
-    // 2. 관심상품 목록, 검색결과 목록 비우기
-    // 3. for 문마다 관심 상품 HTML 만들어서 관심상품 목록에 붙이기!
+    $.ajax({
+        type: 'GET',
+        url: '/api/products',
+        success: function (response) {
+            // 2. 관심상품 목록, 검색결과 목록 비우기
+            $('#product-container').empty();
+            $('#search-result-box').empty();
+            // 3. for 문마다 관심 상품 HTML 만들어서 관심상품 목록에 붙이기!
+            for (let i = 0; i < response.length; i++) {
+                let product = response[i];
+                let tempHtml =  addProductItem(product);
+                $('#product-container').append(tempHtml);
+            }
+        }
+    })
 }
 
 function addProductItem(product) {
     // link, image, title, lprice, myprice 변수 활용하기
-    return ``;
+    return `<div class="product-card" onclick="window.location.href='${product.link}'">
+            <div class="card-header">
+                <img src="${product.image}"
+                     alt="">
+            </div>
+            <div class="card-body">
+                <div class="title">
+                    ${product.title}
+                </div>
+                <div class="lprice">
+                    <span>${numberWithCommas(product.lprice)}</span>원
+                </div>
+                <div class="isgood ${product.lprice <= product.myprice ? '' : 'none'}">
+                    최저가
+                </div>
+            </div>
+        </div>`;
 }
 
 function setMyprice() {

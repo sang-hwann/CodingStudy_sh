@@ -25,8 +25,8 @@ public class NaverShopSearch {
         HttpStatus httpStatus = (HttpStatus) responseEntity.getStatusCode(); //(HttpStatus)로 강제변환함 , 원래는 없음
         int status = httpStatus.value();
         String response = responseEntity.getBody();
-        System.out.println("Response status: " + status);
-        System.out.println(response);
+        //System.out.println("Response status: " + status);
+        //System.out.println(response);
 
         return response;
     }
