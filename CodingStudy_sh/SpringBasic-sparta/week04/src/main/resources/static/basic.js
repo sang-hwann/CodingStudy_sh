@@ -199,7 +199,7 @@ function setMyprice() {
         success: function (response) { //성공적으로 실행시
             $('#container').removeClass('active'); //모달 창을 종료한다.
             alert('관심 가격이 설정되었습니다.');
-            window.location.reload(); //창 새로고침
+            window.location.reload(); //창 새로고침.
         }
     })
 }
