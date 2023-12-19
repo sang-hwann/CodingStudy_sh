@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### AWS db비번 정보 파일 제외 ###
+**/application-*.properties

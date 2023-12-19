@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4e550150-3d81-4799-a1b0-2deb24bad870" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/week04.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/week01_homework.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/week03.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/CodingStudy_sh.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week04/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week04/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week04/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week04/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week04">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2Zll3ZwT083zcKCoHlKP83FrIda" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/skyi0/OneDrive/바탕 화면/공부/새 폴더/CodingStudy_sh",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Week04Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="week04.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.week04.Week04Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.week04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Week04Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="4e550150-3d81-4799-a1b0-2deb24bad870" name="변경" comment="" />
+      <created>1703004347656</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703004347656</updated>
+      <workItem from="1703004348691" duration="310000" />
+      <workItem from="1703004676920" duration="1116000" />
+      <workItem from="1703006020158" duration="22000" />
+      <workItem from="1703006058814" duration="667000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
