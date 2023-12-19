@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e550150-3d81-4799-a1b0-2deb24bad870" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/week04.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/week01_homework.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/week03.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/CodingStudy_sh.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week04/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week04/.gitignore" afterDir="false" />
+    <list default="true" id="4e550150-3d81-4799-a1b0-2deb24bad870" name="변경" comment="aws db 프로퍼티 부분 수정, gitignore 이용">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week04/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week04/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +32,8 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -59,25 +43,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/skyi0/OneDrive/바탕 화면/공부/새 폴더/CodingStudy_sh",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/skyi0/OneDrive/바탕 화면/공부/새 폴더/CodingStudy_sh&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Week04Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="week04.main" />
@@ -109,11 +93,35 @@
       <workItem from="1703004348691" duration="310000" />
       <workItem from="1703004676920" duration="1116000" />
       <workItem from="1703006020158" duration="22000" />
-      <workItem from="1703006058814" duration="667000" />
+      <workItem from="1703006058814" duration="1602000" />
     </task>
+    <task id="LOCAL-00001" summary="aws db 프로퍼티 부분 수정, gitignore 이용">
+      <option name="closed" value="true" />
+      <created>1703006805854</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703006805854</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="aws db 프로퍼티 부분 수정, gitignore 이용" />
+    <option name="LAST_COMMIT_MESSAGE" value="aws db 프로퍼티 부분 수정, gitignore 이용" />
   </component>
 </project>
