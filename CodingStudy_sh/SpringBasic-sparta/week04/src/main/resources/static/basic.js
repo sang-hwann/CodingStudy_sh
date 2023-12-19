@@ -51,7 +51,7 @@ function execSearch() {
     // 1. 검색창의 입력값을 가져온다.
     let query = $('#query').val(); // 해당 id 입력창의 값을 가져온다.
     // 2. 검색창 입력값을 검사하고, 입력하지 않았을 경우 focus.
-    if ( query == '') {
+    if (query == '') {
         alert("검색어를 입력해주세요");
         $('#query').focus(); //포커스를 잡게만든다. 다시 입력창이 반짝이게한다.
     }
@@ -145,7 +145,7 @@ function showProduct() {
             // 3. for 문마다 관심 상품 HTML 만들어서 관심상품 목록에 붙이기!
             for (let i = 0; i < response.length; i++) {
                 let product = response[i];
-                let tempHtml =  addProductItem(product);
+                let tempHtml = addProductItem(product);
                 $('#product-container').append(tempHtml);
             }
         }
@@ -186,4 +186,20 @@ function setMyprice() {
      * 5, 성공적으로 등록되었음을 알리는 alert를 띄운다.
      * 6. 창을 새로고침한다. window.location.reload();
      */
+    let myprice = $('#myprice').val(); //myprice id를 가진 html 입력창의 값을 가져온다.
+    if (myprice == '') { // 입력 문자가 빈칸인 경우 알림
+        alert('값을 입력해주세요.');
+        return;
+    }
+    $.ajax({
+        type: 'PUT',
+        url: `/api/products/${targetId}`, // ${targetId}때문에 백틱을 이용한다.
+        contentType: 'application/json',//밑의 data가 json형식이라는 걸 알려준다
+        data: JSON.stringify({'myprice': myprice}), //바로 문자로 보내는가 아리나 json방식의 문자로 수정해서 보낸다
+        success: function (response) { //성공적으로 실행시
+            $('#container').removeClass('active'); //모달 창을 종료한다.
+            alert('관심 가격이 설정되었습니다.');
+            window.location.reload(); //창 새로고침
+        }
+    })
 }
