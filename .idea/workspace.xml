@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e550150-3d81-4799-a1b0-2deb24bad870" name="변경" comment="aws db 프로퍼티 부분 수정, gitignore 이용">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week04/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CodingStudy_sh/SpringBasic-sparta/week04/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +62,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\skyi0\OneDrive\바탕 화면\공부\새 폴더\CodingStudy_sh\CodingStudy_sh\SpringBasic-sparta\week04\src\main\resources" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Week04Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="week04.main" />
@@ -93,7 +98,10 @@
       <workItem from="1703004348691" duration="310000" />
       <workItem from="1703004676920" duration="1116000" />
       <workItem from="1703006020158" duration="22000" />
-      <workItem from="1703006058814" duration="1602000" />
+      <workItem from="1703006058814" duration="1720000" />
+      <workItem from="1703052349622" duration="143000" />
+      <workItem from="1703683854972" duration="3000" />
+      <workItem from="1703774448703" duration="2215000" />
     </task>
     <task id="LOCAL-00001" summary="aws db 프로퍼티 부분 수정, gitignore 이용">
       <option name="closed" value="true" />
@@ -103,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703006805854</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="aws db 프로퍼티 부분 수정, gitignore 이용">
+      <option name="closed" value="true" />
+      <created>1703007688131</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703007688131</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
